@@ -1,25 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import Section from './components/Section'
+import koala from './assets/koala.jpg'
+import tiger from './assets/tiger.jpg'
 
 function App() {
+
+  let hello = 'Hello world'
+  const handleClick = () => {
+    alert('Hello world')
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+     {/* <h1 className='color' >{hello}</h1> */}
+     <Section text='My first section component'  />
+     <Section text='My second section component' />
+     <button onClick={handleClick}>
+       Click me
+     </button>
     </div>
   );
 }
 
 export default App;
+
+
